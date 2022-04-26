@@ -13,6 +13,16 @@
 		6C67E05128183E7300D71213 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E03F28183E6D00D71213 /* ContentView.swift */; };
 		6C67E05228183E7300D71213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C67E04028183E7300D71213 /* Assets.xcassets */; };
 		6C67E05328183E7300D71213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C67E04028183E7300D71213 /* Assets.xcassets */; };
+		6C67E05D281842EC00D71213 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E05C281842EC00D71213 /* TrackableScrollView.swift */; };
+		6C67E05E281842EC00D71213 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E05C281842EC00D71213 /* TrackableScrollView.swift */; };
+		6C67E060281849F400D71213 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E05F281849F400D71213 /* MenuRow.swift */; };
+		6C67E061281849F400D71213 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E05F281849F400D71213 /* MenuRow.swift */; };
+		6C67E06328184BC700D71213 /* GradientIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E06228184BC700D71213 /* GradientIcon.swift */; };
+		6C67E06428184BC700D71213 /* GradientIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E06228184BC700D71213 /* GradientIcon.swift */; };
+		6C67E067281851EC00D71213 /* FAQViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E066281851EC00D71213 /* FAQViews.swift */; };
+		6C67E068281851EC00D71213 /* FAQViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E066281851EC00D71213 /* FAQViews.swift */; };
+		6C67E06A281851F700D71213 /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E069281851F700D71213 /* PackagesView.swift */; };
+		6C67E06B281851F700D71213 /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67E069281851F700D71213 /* PackagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,11 @@
 		6C67E04528183E7300D71213 /* SwiftUI Combine and Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Combine and Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C67E04B28183E7300D71213 /* SwiftUI Combine and Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Combine and Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C67E04D28183E7300D71213 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		6C67E05C281842EC00D71213 /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
+		6C67E05F281849F400D71213 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
+		6C67E06228184BC700D71213 /* GradientIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientIcon.swift; sourceTree = "<group>"; };
+		6C67E066281851EC00D71213 /* FAQViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViews.swift; sourceTree = "<group>"; };
+		6C67E069281851F700D71213 /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +60,8 @@
 		6C67E03828183E6D00D71213 = {
 			isa = PBXGroup;
 			children = (
+				6C67E06E2818522A00D71213 /* Components */,
+				6C67E065281851DB00D71213 /* Views */,
 				6C67E03D28183E6D00D71213 /* Shared */,
 				6C67E04C28183E7300D71213 /* macOS */,
 				6C67E04628183E7300D71213 /* Products */,
@@ -57,6 +74,7 @@
 				6C67E03E28183E6D00D71213 /* SwiftUI_Combine_and_DataApp.swift */,
 				6C67E03F28183E6D00D71213 /* ContentView.swift */,
 				6C67E04028183E7300D71213 /* Assets.xcassets */,
+				6C67E05C281842EC00D71213 /* TrackableScrollView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -76,6 +94,40 @@
 				6C67E04D28183E7300D71213 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		6C67E065281851DB00D71213 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C67E066281851EC00D71213 /* FAQViews.swift */,
+				6C67E069281851F700D71213 /* PackagesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C67E06C2818520800D71213 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				6C67E05F281849F400D71213 /* MenuRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		6C67E06D2818521C00D71213 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6C67E06228184BC700D71213 /* GradientIcon.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6C67E06E2818522A00D71213 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6C67E06C2818520800D71213 /* Rows */,
+				6C67E06D2818521C00D71213 /* Others */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C67E06328184BC700D71213 /* GradientIcon.swift in Sources */,
+				6C67E05D281842EC00D71213 /* TrackableScrollView.swift in Sources */,
+				6C67E060281849F400D71213 /* MenuRow.swift in Sources */,
+				6C67E067281851EC00D71213 /* FAQViews.swift in Sources */,
 				6C67E05028183E7300D71213 /* ContentView.swift in Sources */,
 				6C67E04E28183E7300D71213 /* SwiftUI_Combine_and_DataApp.swift in Sources */,
+				6C67E06A281851F700D71213 /* PackagesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C67E06428184BC700D71213 /* GradientIcon.swift in Sources */,
+				6C67E05E281842EC00D71213 /* TrackableScrollView.swift in Sources */,
+				6C67E061281849F400D71213 /* MenuRow.swift in Sources */,
+				6C67E068281851EC00D71213 /* FAQViews.swift in Sources */,
 				6C67E05128183E7300D71213 /* ContentView.swift in Sources */,
 				6C67E04F28183E7300D71213 /* SwiftUI_Combine_and_DataApp.swift in Sources */,
+				6C67E06B281851F700D71213 /* PackagesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
