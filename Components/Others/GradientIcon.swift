@@ -11,9 +11,9 @@ struct GradientIcon: View {
     
     var icon: String = "questionmark"
     var body: some View {
-        LinearGradient(colors: [Color.purple,Color.pink], startPoint: .topLeading, endPoint: .bottomTrailing)
+        LinearGradient(colors: [Color.purple,Color.cyan], startPoint: .topLeading, endPoint: .bottomTrailing)
             .mask(Image(systemName: icon).font(.system(size: 17)))
-            .background(Color.blue.opacity(0.5))
+            .background(Color.yellow.opacity(0.5))
             .frame(width: 36, height: 36)
             .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(lineWidth: 1).foregroundColor(.white).blendMode(.overlay))

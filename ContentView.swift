@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -21,11 +23,13 @@ struct ContentView: View {
             .background(Color.black.opacity(0.5))
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .accentColor(colorScheme == .dark ? .white : Color.purple)
         
     }
     
     var content: some View {
         VStack {
+            ProfileRow()
             VStack{
                 NavigationLink(destination: FAQViews()) {
                     MenuRow()
@@ -43,10 +47,7 @@ struct ContentView: View {
                     MenuRow(title: "Youtube Channel", leftIcon: "play.rectangle.fill", rightIcon: "link")
                 }
             }
-            .padding(16)
-            .background(Color.blue)
-            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white, lineWidth: 1).blendMode(.overlay))
-            .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .blurBackground()
             .padding(.top, 20)
             
             Text("Version 1.00")
