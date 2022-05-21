@@ -25,6 +25,14 @@ extension View {
             .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
         
     }
+    
+    @ViewBuilder func forLiteMode <Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
 }
 
 extension Date {

@@ -14,4 +14,3 @@ struct Certificate: Identifiable, Decodable {
     var logo: String
     var instructor: String
 }
-

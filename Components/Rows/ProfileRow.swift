@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileRow: View {
+    @AppStorage("isLiteMode") var isLiteMode : Bool = false
+    
     var body: some View {
         HStack(alignment: .center, spacing: 16.0) {
             profilePicture
@@ -37,7 +39,9 @@ struct ProfileRow: View {
                 .font(.system(size: 66))
                 .angulerGradientGlow(colors: [Color.blue, Color.brown, Color.yellow,Color.red])
                 .frame(width: 66, height: 66)
-                .blur(radius: 10)
+                .forLiteMode(!isLiteMode, transform: { view in
+                    view.blur(radius: 10)
+                })
             
             VStack {
                 Image("profile")
@@ -52,10 +56,12 @@ struct ProfileRow: View {
     
     var glowIcon: some View {
         ZStack {
-            AngularGradient(gradient: Gradient(colors: [Color.purple,Color.purple]), center: .center, startAngle: .init(degrees: -190), endAngle: .degrees(155))
-                .blur(radius: 8)
-                .shadow(radius: 30)
-                .frame(width: 36, height: 36)
+            if !isLiteMode {
+                AngularGradient(gradient: Gradient(colors: [Color.purple,Color.purple]), center: .center, startAngle: .init(degrees: -190), endAngle: .degrees(155))
+                    .blur(radius: 8)
+                    .shadow(radius: 30)
+                    .frame(width: 36, height: 36)
+            }
             
             Image(systemName: "square.stack.fill")
                 .linearGradientBackground(colors: [Color.yellow,Color.yellow])

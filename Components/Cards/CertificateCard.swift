@@ -11,10 +11,9 @@ struct CertificateCard: View {
     @EnvironmentObject var certificateVM: CertificateViewModel
     @Binding var selection: Int
     
-    
+
     var body: some View {
         ZStack {
-            
             if certificateVM.certificates.count > 0 {
                 content
             } else {

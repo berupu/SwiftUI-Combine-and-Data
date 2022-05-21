@@ -9,20 +9,29 @@ import SwiftUI
 
 struct CertificatesView: View {
     @StateObject var certificateVM =  CertificateViewModel()
-    
+    @StateObject var networkReachability = NetworkRechability()
     @State private var selection: Int = 0
     
     var body: some View {
         VStack {
-            TabView(selection: $selection) {
-                ForEach(certificateVM.certificates.indices, id: \.self) { index in
-                    CertificateCard(selection: $selection)
-                        .padding(.horizontal, 8)
-                        .environmentObject(certificateVM)
+            if networkReachability.reachable {
+                if certificateVM.certificates.count > 0 {
+                    TabView(selection: $selection) {
+                        ForEach(certificateVM.certificates, id: \.id) { certificate in
+                            CertificateCard(selection: $selection)
+                                .padding(.horizontal, 8)
+                                .environmentObject(certificateVM)
+                        }
+                    }
+                    .tabViewStyle(DefaultTabViewStyle())
+                } else {
+                    ProgressView()
                 }
+            } else {
+                Text("Please connect to the internet to see your certificate.")
+                    .multilineTextAlignment(.center)
+                    .padding()
             }
-            .tabViewStyle(PageTabViewStyle())
-            
         }
         .background(Color.white)
     }

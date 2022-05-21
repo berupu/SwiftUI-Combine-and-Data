@@ -11,6 +11,8 @@ struct PrimaryButton: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var text: String = "Contact support"
     
+    @AppStorage("isLiteMode") var isLiteMode : Bool = false
+    
     
     var body: some View {
         if colorScheme == .light{
@@ -37,7 +39,9 @@ struct PrimaryButton: View {
             RoundedRectangle(cornerRadius: 12)
                 .frame(height: 50)
                 .angulerGradientGlow(colors: [Color.blue, Color.pink,Color.cyan,Color.brown])
-                .blur(radius: 8)
+                .forLiteMode(!isLiteMode) { view in
+                    view.blur(radius: 8)
+                }
             
             Text(text)
                 .linearGradientBackground(colors: [Color.blue, Color.cyan])
